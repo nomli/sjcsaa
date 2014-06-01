@@ -1,0 +1,421 @@
+/*STANDARD FONTS*/
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/ubuntu/ubuntu-r-webfont.eot');
+    src: url('../fonts/ubuntu/ubuntu-r-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ubuntu/ubuntu-r-webfont.woff') format('woff'),
+         url('../fonts/ubuntu/ubuntu-r-webfont.ttf') format('truetype'),
+         url('../fonts/ubuntu/ubuntu-r-webfont.svg#ubunturegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'kiteone';
+    src: url('../fonts/kiteone/kiteone-regular-webfont.eot');
+    src: url('../fonts/kiteone/kiteone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kiteone/kiteone-regular-webfont.woff') format('woff'),
+         url('../fonts/kiteone/kiteone-regular-webfont.ttf') format('truetype'),
+         url('../fonts/kiteone/kiteone-regular-webfont.svg#kite_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*FONTS*/
+
+body{
+	font-family:ubuntu;
+}
+header{
+	text-align:center;
+}
+header a.logo{
+	padding:45px;
+	border-bottom:1px solid #d9d9d9;
+	display:inline-block;
+	width:100%;
+	max-width:471px;
+	position:relative;
+}
+.content{
+	padding:20px 0;
+}
+.mystory{
+	position:relative;
+}
+.mystory img{
+	width: 100%;
+	height: auto;
+	z-index: 1;
+}
+.mystory p.caption{
+	position: absolute;
+	left: 0;
+	right:0;
+	bottom:10%;
+	margin:auto;
+	background:#000;
+	color:#fff;
+	font:normal 16px kiteone;
+	padding:20px;
+	z-index: 2;
+	width: 60%;
+	text-align: center;
+}
+.products{
+	border-top:1px solid #d9d9d9;
+	padding-top:10px;
+}
+.prodItems{
+	text-align: center;
+}
+.prodname{
+	text-transform: uppercase;
+	color:#888;
+}
+.prodImg img{
+	max-width: 100%;
+	height:auto;
+}
+.prodItems .footer{
+	padding:10px 0;
+	border-top:1px solid #d9d9d9;
+	border-bottom:1px solid #d9d9d9;
+	overflow: hidden;
+	font:normal 14px ubuntu;
+	text-transform: uppercase;
+	color:#000;
+}
+.prodItems .footer > .price{
+	float: left;
+	margin:0;
+}
+.prodItems .footer > .buy{
+	color:#000;
+	text-decoration:none;
+	float: right;
+	display: block;
+	padding-left:25px;
+	line-height: 21px;
+	background: url(../img/cart.jpg) no-repeat 0 0;
+	
+}
+.product-modal .modal-lg,
+.store-photos .modal-lg{
+	max-width: 700px;
+}
+.product-modal .modal-lg > .modal-content{
+	border-radius: 0;
+	padding:0 10px;
+}
+.product-modal .modal-body{
+	padding:0;
+}
+.product-modal .modal-header{
+	overflow: hidden;
+}
+.product-modal h4.modal-title{
+	float:left;
+	font-size:14px;
+}
+/******STOREPAGE*******/
+#carousel-prod  .item{
+	margin:auto;
+	margin-bottom:20px;
+}
+#carousel-prod  .carousel-prod-img {
+	width:90%;
+	margin:auto;
+}
+#carousel-prod  .carousel-prod-img img{
+	width:100%;
+	height:auto;
+}
+#carousel-prod .carousel-control span{
+	width:27px;
+	height:50px;
+	display:block;
+	background:url(../img/arrow.png) no-repeat;
+	position:absolute;
+	top:40%;
+	display: inline-block;
+}
+#carousel-prod .carousel-control.left span{
+	background-position:bottom left;
+	left:10%;
+}
+#carousel-prod .carousel-control.right span{
+	background-position:top left;
+	right:10%;
+}
+.prod-description{
+	font-size:12px;
+}
+.prod-description .price{
+	font:normal 24px ubuntu
+}
+.prod-description .btn,
+.prod-description .btn:hover{
+	text-transform:uppercase;
+	background:#000 url(../img/cartb.jpg) no-repeat 10% center;
+	padding-left:50px;
+	padding-right:20px;
+	color:#fff;
+}
+/*****************************************************
+			OVERIDES,HELPERS,STANDARDS
+*****************************************************/
+.navbar{
+	background: none;
+	border: none;
+	margin-top: 20px;
+	text-align: center;
+}
+.navbar-nav{
+	float: none;
+}
+.nav > li{
+	float: none;
+	display: inline-block;
+	margin:0 40px;
+}
+.nav > li > a{
+	font-size:14px;
+	text-transform: uppercase;
+	padding:5px;
+}
+.navbar-default .navbar-nav > li > a{
+	color:#000;
+}
+.nav > li > a:after {
+    background: none repeat scroll 0 0 #000;
+    content: "";
+    height: 1px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-10px);
+    transition: height 0.3s ease 0s, opacity 0.3s ease 0s, transform 0.3s ease 0s;
+    width: 100%;
+}
+.nav > li > a.current{
+	border-bottom:2px solid #000;
+}
+.nav > li > a:hover:after,
+.nav > li > a:focus:after {
+    height: 2px;
+    opacity: 1;
+    transform: translateY(0px);
+}
+/* Fade transition for carousel items */
+#carousel-home .item {
+    left: 0 !important;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    transition: opacity .4s;
+}
+.carousel-control {
+    background-image: none !important; /* remove background gradients on controls */
+}
+/* Fade controls with items */
+.next.left,
+.prev.right {
+    opacity: 1;
+    z-index: 1;
+}
+.active.left,
+.active.right {
+    opacity: 0;
+    z-index: 2;
+}
+.input-group-lg{
+	width:100%;
+	margin-bottom:15px;
+}
+.input-group-lg .form-control{
+	font-size:14px;
+	border-radius: 0;
+}
+#contact textarea, #contact input:focus {
+    border-color: #CCCCCC;
+    box-shadow: none;
+    outline: 0 none;
+}
+#contact textarea {
+    border-radius: 0;
+    resize: none;
+	width:100%;
+	border:1px solid #CCCCCC;
+	color:#555555;
+	padding:10px;
+}
+label{
+	font:normal 14px ubuntu;
+	color:#000;
+	text-transform:uppercase;
+}
+.btn{
+	padding:15px 30px;
+}
+.btn,.btn:hover{
+	background:#000;
+	border:none;
+	border-radius:0;
+	color:#d9d6e0
+}
+.checkbox{
+	margin-top:0;
+}
+.checkbox label{
+	font:normal 14px ubuntu;
+	text-transform: capitalize
+}
+.checkbox label p{
+	color:#7f7f7f;
+	font: italic 12px ubuntu;
+}
+[type="checkbox"]{
+	display: none;
+}
+label.subscribe:before{
+	content: '';
+	width:15px;
+	height:15px;
+	background:#fff;
+	border:1px solid #cfcfcf;
+	float: left;
+    margin-left: -20px;
+    margin-right:5px;
+	text-align:center;
+	font:normal 12px/15px;
+}
+[type="checkbox"]:checked + label:before{
+	background:url(../img/checked.jpg) no-repeat center center;
+}
+/**CONTACT FORM 7 *****/
+.input-group-lg .form-control{
+	height: 46px;
+    line-height: 1.33;
+    padding: 10px 16px;
+}
+/***CONTACT****/
+.thumbs.list-inline > li{
+	margin:0 5px 5px 0;
+	padding:0;
+	cursor: pointer;
+	max-width: 102px;
+}
+.thumbs.list-inline > li img{
+	width:100%;
+	height: auto;
+}
+.thumbs.list-inline > li:hover img{
+	 filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+	 filter: gray; /* IE6-9 */
+	 -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+.map {
+    position: relative;
+    padding-bottom: 30%;
+    height: 0;
+    overflow: hidden;
+	min-height:150px;
+}
+.map iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	
+}
+/***MODAL***/
+.store-gallery{
+	position:relative;
+}
+.store-gallery > div.imgContainer img{
+	width: 100%;
+	height: auto;
+}
+.store-gallery .controls{
+    position:absolute;
+    top:45%;
+    color:#999;
+    font-size:2.5em;
+    text-decoration:none;
+}
+.controls.left{
+    left:0
+}
+.controls.right{
+    right:0;
+}
+/**ADD THIS**/
+.addthis_toolbox span{
+	display: none!important;
+}
+/**FOOTER**/
+footer{
+	background: #eaeaea;
+	padding-top:50px;
+	text-align:center;
+	color:#696969;
+}
+footer .container{
+	padding:0;
+}
+footer .social{
+	display: block;
+	text-align: center;
+}
+footer .social li{
+	margin:0 10px;
+	display: inline-block;
+}
+footer .foot-nav{
+	margin:20px 0;
+}
+footer .foot-nav li{
+	display: inline-block;
+	margin:0 10px;
+}
+footer .foot-nav li a{
+	color:#696969;
+	text-decoration:none;
+}
+footer .foot-nav li a:hover{
+	color:#999;
+}
+footer p.copyr{
+	font:normal 10px kiteone;
+}
+footer section{
+	font:normal 10px/30px ubuntu;
+	background: #d0d0d0;
+}
+@media only screen and (max-width: 1024px) {
+	.nav > li{
+		margin:0;
+	}
+	.mystory p.caption{
+		font-size:0.7em;
+		width:90%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.nav > li{
+		display: block;
+		margin:0;
+		text-align: left;
+		padding-left:10px;
+	}
+	.mystory p.caption{
+		font-size:0.7em;
+		width:90%;
+	}
+	.address{
+		margin-top:20px;
+	}
+}
